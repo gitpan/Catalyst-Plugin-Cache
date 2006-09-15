@@ -14,11 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 5f505e8545ba63c6062c5cf91367346d9aad57a6 MANIFEST
-SHA1 2c61a2fe3636fc32a53fabf922895c9e50cd52ac META.yml
-SHA1 be7694cf3ec81393abf16d0e7978990a71168e94 Makefile.PL
-SHA1 a13f207d213ddd9e7063dc905286a932016cf7d7 README
-SHA1 30e3d61a806173cbad483c2c8b2062514eae53e4 lib/Catalyst/Plugin/Cache.pm
+SHA1 ea81dac671db88597f5a8c25616c51f22892a545 Changes
+SHA1 cf630a984dcd9de782c3319555909931db69fb84 MANIFEST
+SHA1 237315f161ea0ac4349901e2717737256a38773f META.yml
+SHA1 5cb031e576e3cb8935f9dfc093de639f787900ef Makefile.PL
+SHA1 83f82accc1996037171b73dd1eb31effd181cca4 README
+SHA1 952e948ac0e4f3d9a8213f5df22117d5a71909bc lib/Catalyst/Plugin/Cache.pm
 SHA1 8ebedad7e3ac382a0de7cd2859388a50f6c04cbe lib/Catalyst/Plugin/Cache/Backend.pm
 SHA1 09410be09692885ab1f77fed672d66a0fa2853db lib/Catalyst/Plugin/Cache/Backend/Memory.pm
 SHA1 b1b80c5d35289ee1e7a7ae1d5c7f3736c8db2a98 lib/Catalyst/Plugin/Cache/Choose/KeyRegexes.pm
@@ -26,7 +27,7 @@ SHA1 dc8068510786177f9ec8be74c874db259bfdb698 lib/Catalyst/Plugin/Cache/Curried.
 SHA1 ce22940b8437e92ec1f0586d526b3fceaae6f480 lib/Catalyst/Plugin/Cache/Store.pod
 SHA1 64c6a90c3362e65f84a1af483046a4aa83b88431 lib/Catalyst/Plugin/Cache/Store/Memory.pm
 SHA1 4c37b3198ba109419d6d1f7605dfbb8952527d1b t/basic.t
-SHA1 8dbbabf2c3f3083502e89313892237dba57e94e0 t/config_backend_class.t
+SHA1 fe51d5ef520a90604bb079831e290c5e3f7dd950 t/config_backend_class.t
 SHA1 a878e458b8eb1a5a653409f7421dbc49427eeb0e t/config_guess_backend.t
 SHA1 7157be54fa41aa4dedd85a9fd2a9584221bca380 t/currying_conf.t
 SHA1 2a41aebc90ef989c4ba882712cc305950031290c t/key_regexes.t
@@ -36,7 +37,7 @@ SHA1 5560f5ece751ddb4cf4602447c4fdf4ec6a6ee4d t/live_app.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (Darwin)
 
-iD8DBQFEwnvZVCwRwOvSdBgRAn/dAKCPIKIcqe4fnZT4av/vQmhSveQI9wCgoEpg
-NBvTE5IgjQg3MuntlUjZB5s=
-=2owH
+iD8DBQFFCsOhVCwRwOvSdBgRAl2TAJ0ZoNvJTZLodgeWjHNcuEABB2fbywCgmLXV
+XlCKuSyAqNxHXyaR/Yjm/B4=
+=gCiC
 -----END PGP SIGNATURE-----

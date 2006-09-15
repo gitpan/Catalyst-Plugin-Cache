@@ -6,7 +6,7 @@ use base qw/Class::Data::Inheritable Class::Accessor::Fast/;
 use strict;
 use warnings;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use Scalar::Util ();
 use Catalyst::Utils ();
@@ -81,7 +81,7 @@ sub setup_generic_cache_backend {
     my %config = %$config;
 
     if ( my $class = delete $config{class} ) {
-        $app->setup_cache_backend_by_class( $name, $class, %config );
+        $app->setup_cache_backend_by_class( $name, $class, \%config );
     } elsif ( my $store = delete $config->{store} || $app->default_cache_store ) {
         my $method = lc("setup_${store}_cache_backend");
 
@@ -89,7 +89,7 @@ sub setup_generic_cache_backend {
         "Please consult the Catalyst::Plugin::Cache documentation on how to configure hetrogeneous stores."
             unless $app->can($method);
 
-        $app->$method( $name, %config );
+        $app->$method( $name, \%config );
     } else {
         $app->log->warn("Couldn't setup the cache backend named '$name'");
     }
@@ -602,6 +602,16 @@ regex matching on the keys. Can be used to partition the keyspace.
 L<Catalyst::Plugin::Cache::ControllerNamespacing> - wrap backend objects in a
 name mangler so that every controller gets its own keyspace.
 
-=cut
+=head1 AUTHOR
 
+Yuval Kogman, C<nothingmuch@woobling.org>
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright (c) Yuval Kogman, 2006. All rights reserved.
+
+This library is free software, you can redistribute it and/or modify it under
+the same terms as Perl itself, as well as under the terms of the MIT license.
+
+=cut
 
