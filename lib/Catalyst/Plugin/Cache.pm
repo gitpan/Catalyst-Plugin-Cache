@@ -6,7 +6,7 @@ use base qw/Class::Data::Inheritable Class::Accessor::Fast/;
 use strict;
 use warnings;
 
-our $VERSION = "0.02";
+our $VERSION = "0.03";
 
 use Scalar::Util ();
 use Catalyst::Utils ();
@@ -241,8 +241,9 @@ sub choose_cache_backend_wrapper {
 sub choose_cache_backend { shift->NEXT::choose_cache_backend( @_ ) } # a convenient fallback
 
 sub cache_set {
-    my ( $c, $key, $value, @meta ) = @_;
-    $c->choose_cache_backend_wrapper( key =>  $key, value => $value, @meta )->set( $key, $value );
+    my ( $c, $key, $value, %meta ) = @_;
+    $c->choose_cache_backend_wrapper( key =>  $key, value => $value, %meta )
+        ->set( $key, $value, exists $meta{expires} ? $meta{expires} : () );
 }
 
 sub cache_get {

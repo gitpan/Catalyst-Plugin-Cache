@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.54.
+signed via the Module::Signature module, version 0.55.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,16 +14,16 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 ea81dac671db88597f5a8c25616c51f22892a545 Changes
+SHA1 28d41ba9aab0bf54c27360a4b0b6e67fbb0432bc Changes
 SHA1 cf630a984dcd9de782c3319555909931db69fb84 MANIFEST
-SHA1 237315f161ea0ac4349901e2717737256a38773f META.yml
-SHA1 5cb031e576e3cb8935f9dfc093de639f787900ef Makefile.PL
+SHA1 f7359608c82d0f3f92b022255ebaa96ff1689dea META.yml
+SHA1 6ae0abe96103662528e342a9a3d9bf13a2fede66 Makefile.PL
 SHA1 83f82accc1996037171b73dd1eb31effd181cca4 README
-SHA1 952e948ac0e4f3d9a8213f5df22117d5a71909bc lib/Catalyst/Plugin/Cache.pm
+SHA1 738de515a288094e2b14569925c3ba5ea3e744c6 lib/Catalyst/Plugin/Cache.pm
 SHA1 8ebedad7e3ac382a0de7cd2859388a50f6c04cbe lib/Catalyst/Plugin/Cache/Backend.pm
 SHA1 09410be09692885ab1f77fed672d66a0fa2853db lib/Catalyst/Plugin/Cache/Backend/Memory.pm
 SHA1 b1b80c5d35289ee1e7a7ae1d5c7f3736c8db2a98 lib/Catalyst/Plugin/Cache/Choose/KeyRegexes.pm
-SHA1 dc8068510786177f9ec8be74c874db259bfdb698 lib/Catalyst/Plugin/Cache/Curried.pm
+SHA1 a064c8b6d5ad2d4ec01def1451b91db97a2e94db lib/Catalyst/Plugin/Cache/Curried.pm
 SHA1 ce22940b8437e92ec1f0586d526b3fceaae6f480 lib/Catalyst/Plugin/Cache/Store.pod
 SHA1 64c6a90c3362e65f84a1af483046a4aa83b88431 lib/Catalyst/Plugin/Cache/Store/Memory.pm
 SHA1 4c37b3198ba109419d6d1f7605dfbb8952527d1b t/basic.t
@@ -35,9 +35,9 @@ SHA1 b6a382072e97d5c7600880935be80c843ea50a5d t/lib/CacheTestApp.pm
 SHA1 20d3480bf50d6673622db06805ad050e206ed0f4 t/lib/CacheTestApp/Controller/Root.pm
 SHA1 5560f5ece751ddb4cf4602447c4fdf4ec6a6ee4d t/live_app.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.1 (Darwin)
+Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFFCsOhVCwRwOvSdBgRAl2TAJ0ZoNvJTZLodgeWjHNcuEABB2fbywCgmLXV
-XlCKuSyAqNxHXyaR/Yjm/B4=
-=gCiC
+iD8DBQFGjUEtVCwRwOvSdBgRAixIAKCOFiKEO+KvzEeEiz5sGItacMMHzACgt7nd
+5a4K80Ugk6E8ah7g+LNhaIE=
+=QUhQ
 -----END PGP SIGNATURE-----
