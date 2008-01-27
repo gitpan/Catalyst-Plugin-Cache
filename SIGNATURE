@@ -14,12 +14,12 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 28d41ba9aab0bf54c27360a4b0b6e67fbb0432bc Changes
+SHA1 92c82bc4d039cd70adec2685d54bc13bb428112a Changes
 SHA1 cf630a984dcd9de782c3319555909931db69fb84 MANIFEST
-SHA1 f7359608c82d0f3f92b022255ebaa96ff1689dea META.yml
+SHA1 90836d6d8775479450241bffc823aeb7e6347e8e META.yml
 SHA1 6ae0abe96103662528e342a9a3d9bf13a2fede66 Makefile.PL
-SHA1 83f82accc1996037171b73dd1eb31effd181cca4 README
-SHA1 738de515a288094e2b14569925c3ba5ea3e744c6 lib/Catalyst/Plugin/Cache.pm
+SHA1 f06b0f849d2b6dede8bb2cf8b1ffbe1dcc7433d9 README
+SHA1 94af12cc7e836d5fe6eadf1315ecf16e8109b55e lib/Catalyst/Plugin/Cache.pm
 SHA1 8ebedad7e3ac382a0de7cd2859388a50f6c04cbe lib/Catalyst/Plugin/Cache/Backend.pm
 SHA1 09410be09692885ab1f77fed672d66a0fa2853db lib/Catalyst/Plugin/Cache/Backend/Memory.pm
 SHA1 b1b80c5d35289ee1e7a7ae1d5c7f3736c8db2a98 lib/Catalyst/Plugin/Cache/Choose/KeyRegexes.pm
@@ -27,7 +27,7 @@ SHA1 a064c8b6d5ad2d4ec01def1451b91db97a2e94db lib/Catalyst/Plugin/Cache/Curried.
 SHA1 ce22940b8437e92ec1f0586d526b3fceaae6f480 lib/Catalyst/Plugin/Cache/Store.pod
 SHA1 64c6a90c3362e65f84a1af483046a4aa83b88431 lib/Catalyst/Plugin/Cache/Store/Memory.pm
 SHA1 4c37b3198ba109419d6d1f7605dfbb8952527d1b t/basic.t
-SHA1 fe51d5ef520a90604bb079831e290c5e3f7dd950 t/config_backend_class.t
+SHA1 b5daf88452048a6455cab25e95f5077a7448d053 t/config_backend_class.t
 SHA1 a878e458b8eb1a5a653409f7421dbc49427eeb0e t/config_guess_backend.t
 SHA1 7157be54fa41aa4dedd85a9fd2a9584221bca380 t/currying_conf.t
 SHA1 2a41aebc90ef989c4ba882712cc305950031290c t/key_regexes.t
@@ -37,7 +37,7 @@ SHA1 5560f5ece751ddb4cf4602447c4fdf4ec6a6ee4d t/live_app.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.7 (Darwin)
 
-iD8DBQFGjUEtVCwRwOvSdBgRAixIAKCOFiKEO+KvzEeEiz5sGItacMMHzACgt7nd
-5a4K80Ugk6E8ah7g+LNhaIE=
-=QUhQ
+iD8DBQFHm/8tVCwRwOvSdBgRAnLkAJ4sjVTtOKeBjbHlhNmaanFZEP90fgCgsMxf
+O8I8Xiv9v7qiTXqvfji/HDc=
+=rcfD
 -----END PGP SIGNATURE-----
