@@ -14,5 +14,4 @@ WriteMakefile(
     'INSTALLDIRS' => 'site',
     'EXE_FILES'   => [],
     'PL_FILES'    => {},
-    'SIGN'        => 1,
 );
