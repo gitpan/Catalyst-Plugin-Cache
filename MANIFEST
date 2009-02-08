@@ -17,3 +17,4 @@ t/lib/CacheTestApp.pm
 t/lib/CacheTestApp/Controller/Root.pm
 t/live_app.t
 META.yml                                 Module meta-data (added by MakeMaker)
+SIGNATURE                                Public-key signature (added by MakeMaker)

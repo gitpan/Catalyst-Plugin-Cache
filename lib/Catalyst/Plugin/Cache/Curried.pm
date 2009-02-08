@@ -64,7 +64,7 @@ C<cache_get> and C<cache_remove> that look more like a backend.
 
 =head1 DESCRIPTION
 
-See L<Catalyst::Plugin::Cache/METADATA> for details.
+See L<Catalyst::Plugin::Cache/META DATA> for details.
 
 =head1 METHODS
 
