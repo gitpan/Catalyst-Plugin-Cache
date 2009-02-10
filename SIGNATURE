@@ -14,29 +14,29 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 ce996fe23e99a382b913dd66686aa991101f6489 Changes
+SHA1 2f2bf6a1065e03e3f87ceb0128938f56ded663a3 Changes
 SHA1 1976c14603c9c87d1c90c688e6246c05003ee538 MANIFEST
-SHA1 c99345fd2ac4b0655b243de7dc3dc9199b605fd9 META.yml
-SHA1 6ae0abe96103662528e342a9a3d9bf13a2fede66 Makefile.PL
-SHA1 4ca54c972eb89a85462ceb64166fa6f957448d09 lib/Catalyst/Plugin/Cache.pm
+SHA1 0c816c13f1c8d693df25d017ea94e18fe238ffad META.yml
+SHA1 dc3637be9fb1095f5daba4302525ec054553ca51 Makefile.PL
+SHA1 286e3fdd61eb8f43c88115eba7534bf2a389c157 lib/Catalyst/Plugin/Cache.pm
 SHA1 8ebedad7e3ac382a0de7cd2859388a50f6c04cbe lib/Catalyst/Plugin/Cache/Backend.pm
-SHA1 09410be09692885ab1f77fed672d66a0fa2853db lib/Catalyst/Plugin/Cache/Backend/Memory.pm
+SHA1 6221c0869bf1bdee6c0534f64f48612164771216 lib/Catalyst/Plugin/Cache/Backend/Memory.pm
 SHA1 c69a308e86f0577b7932a87a453d1b62f8b96f13 lib/Catalyst/Plugin/Cache/Choose/KeyRegexes.pm
 SHA1 a064c8b6d5ad2d4ec01def1451b91db97a2e94db lib/Catalyst/Plugin/Cache/Curried.pm
 SHA1 ce22940b8437e92ec1f0586d526b3fceaae6f480 lib/Catalyst/Plugin/Cache/Store.pod
 SHA1 64c6a90c3362e65f84a1af483046a4aa83b88431 lib/Catalyst/Plugin/Cache/Store/Memory.pm
-SHA1 65b7e029d8e98c8b653bde9e0461717403079d26 t/basic.t
+SHA1 0f90144b3b1e7aa5620f1360132cd77d8004d9d6 t/basic.t
 SHA1 b5daf88452048a6455cab25e95f5077a7448d053 t/config_backend_class.t
 SHA1 a878e458b8eb1a5a653409f7421dbc49427eeb0e t/config_guess_backend.t
-SHA1 f3558c371c4ed8958faecee39e511e1048e8bbca t/currying_conf.t
-SHA1 15018ee81e7cdabf891ac80fe2c8d33ce7a02187 t/key_regexes.t
+SHA1 d0976fe7775f253d24050cc7d9227c6716e42562 t/currying_conf.t
+SHA1 08b27233c17e55fb39b2d22d3ae7dc6053c13707 t/key_regexes.t
 SHA1 b6a382072e97d5c7600880935be80c843ea50a5d t/lib/CacheTestApp.pm
 SHA1 20d3480bf50d6673622db06805ad050e206ed0f4 t/lib/CacheTestApp/Controller/Root.pm
 SHA1 5560f5ece751ddb4cf4602447c4fdf4ec6a6ee4d t/live_app.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.1 (Darwin)
 
-iD8DBQFJjovlqiut6GtTojsRAjS+AJ4+houMjyWDIaULChxrAO/BYGUMMQCgjO1U
-5+08mfCBdgWmuKR3DDgc6RA=
-=UG8J
+iD8DBQFJkU7Hqiut6GtTojsRAg43AJ9++FUcAhHVe8Kqnak8hkwvfuIQ9QCeM8Fl
+UQwKekta5OIKYLIx1vxOqAg=
+=E7zQ
 -----END PGP SIGNATURE-----
