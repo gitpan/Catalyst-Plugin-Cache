@@ -6,7 +6,7 @@ use base qw(Class::Accessor::Fast Class::Data::Inheritable);
 use strict;
 use warnings;
 
-our $VERSION = "0.08";
+our $VERSION = "0.09";
 
 use Scalar::Util ();
 use Catalyst::Utils ();
@@ -31,10 +31,23 @@ sub setup {
 
     $ret;
 }
-
-sub _get_cache_plugin_config {
-    my ($app) = @_;
-    return $app->config->{'Plugin::Cache'} || $app->config->{cache};
+{
+    my %has_warned_for;
+    sub _get_cache_plugin_config {
+        my ($app) = @_;
+        my $config = $app->config->{'Plugin::Cache'};
+        if (!$config) {
+            $config = $app->config->{cache};
+            my $appname = ref($app);
+            if (! $has_warned_for{$appname}++ ) {
+                $app->log->warn($config ?
+                    'Catalyst::Plugin::Cache config found in deprecated $c->config->{cache}, please move to $c->config->{"Plugin::Cache"}.'
+                    : 'Catalyst::Plugin::Cache config not found, using empty config!'
+                );
+            }
+        }
+        return $config || {};
+    }
 }
 
 sub get_default_cache_backend_config {
@@ -54,7 +67,7 @@ sub setup_cache_backends {
     $app->maybe::next::method;
 
     # FIXME - Don't know why the _get_cache_plugin_config method doesn't work here!
-    my $conf = $app->config->{'Plugin::Cache'} ? $app->config->{'Plugin::Cache'}->{backends} : $app->config->{cache}->{backends};
+    my $conf = $app->_get_cache_plugin_config->{backends};
     foreach my $name ( keys %$conf ) {
         next if $app->get_cache_backend( $name );
         $app->setup_generic_cache_backend( $name, $app->get_cache_backend_config( $name ) || {} );
@@ -288,6 +301,24 @@ sub cache_remove {
     $c->choose_cache_backend_wrapper( key => $key, @meta )->remove( $key );
 }
 
+sub cache_compute {
+    my ($c, $key, $code, %meta) = @_;
+
+    my $backend = $c->choose_cache_backend_wrapper( key =>  $key, %meta );
+    if ($backend->can('compute')) {
+        return $backend->compute( $key, $code, exists $meta{expires} ? $meta{expires} : () );
+    }
+
+    Carp::croak "must specify key and code" unless defined($key) && defined($code);
+
+    my $value = $c->cache_get( $key, %meta );
+    if ( !defined $value ) {
+        $value = $code->();
+        $c->cache_set( $key, $value, %meta );
+    }
+    return $value;
+}
+
 __PACKAGE__;
 
 __END__
@@ -375,8 +406,16 @@ See L</METADATA> for details.
 
 =item cache_remove $key, %meta
 
+=item cache_compute $key, $code, %meta
+
 These cache operations will call L<choose_cache_backend> with %meta, and
-then call C<set>, C<get>, or C<remove> on the resulting backend object.
+then call C<set>, C<get>, C<remove>, or C<compute> on the resulting backend
+object.
+
+If the backend object does not support C<compute> then we emulate it by
+calling L<cache_get>, and if the returned value is undefined we call the passed
+code reference, stores the returned value with L<cache_set>, and then returns
+the value.  Inspired by L<CHI>.
 
 =item choose_cache_backend %meta
 
