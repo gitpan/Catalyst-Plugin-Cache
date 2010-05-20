@@ -6,13 +6,13 @@ use base qw(Class::Accessor::Fast Class::Data::Inheritable);
 use strict;
 use warnings;
 
-our $VERSION = "0.09";
+our $VERSION = "0.10";
 
 use Scalar::Util ();
 use Catalyst::Utils ();
 use Carp ();
 use MRO::Compat;
-
+use Scalar::Util qw/ blessed /;
 use Catalyst::Plugin::Cache::Curried;
 
 __PACKAGE__->mk_classdata( "_cache_backends" );
@@ -154,7 +154,7 @@ sub cache {
     if ( @meta == 1 ) {
         my $name = $meta[0];
         return ( $c->get_preset_curried($name) || $c->get_cache_backend($name) );
-    } elsif ( !@meta ) {
+    } elsif ( !@meta && blessed $c ) {
         # be nice and always return the same one for the simplest case
         return ( $c->_default_curried_cache || $c->_default_curried_cache( $c->curry_cache( @meta ) ) );
     } else {
